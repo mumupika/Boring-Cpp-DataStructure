@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/Users/yimuyuan/Documents/codes/C_C++/DataStructure_and_algorithm/C++/build",
+  "command": "/opt/homebrew/opt/llvm/bin/clang++ -I/Users/yimuyuan/Documents/codes/C_C++/DataStructure_and_algorithm/C++/include -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/MyLibrary.dir/src/headers.cpp.o -c /Users/yimuyuan/Documents/codes/C_C++/DataStructure_and_algorithm/C++/src/headers.cpp",
+  "file": "/Users/yimuyuan/Documents/codes/C_C++/DataStructure_and_algorithm/C++/src/headers.cpp",
+  "output": "CMakeFiles/MyLibrary.dir/src/headers.cpp.o"
+},
+{
+  "directory": "/Users/yimuyuan/Documents/codes/C_C++/DataStructure_and_algorithm/C++/build",
+  "command": "/opt/homebrew/opt/llvm/bin/clang++ -I/Users/yimuyuan/Documents/codes/C_C++/DataStructure_and_algorithm/C++/include -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/main.dir/src/main.cpp.o -c /Users/yimuyuan/Documents/codes/C_C++/DataStructure_and_algorithm/C++/src/main.cpp",
+  "file": "/Users/yimuyuan/Documents/codes/C_C++/DataStructure_and_algorithm/C++/src/main.cpp",
+  "output": "CMakeFiles/main.dir/src/main.cpp.o"
+}
+]
