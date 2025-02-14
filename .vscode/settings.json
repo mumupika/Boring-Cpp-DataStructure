@@ -5,7 +5,7 @@
         // 标记compile_commands.json文件的目录位置
         "--compile-commands-dir=${workspaceFolder}/build",
         // Log打开
-        "-log=info",
+        "-log=verbose",
         // 同时开启的任务数量
         "-j=4",
         // clang-tidy功能
@@ -18,9 +18,16 @@
         "--header-insertion=iwyu",
         // pch优化的位置
         "--pch-storage=disk",
+        // 检查设置
+        "--clang-tidy-checks=performance-*,bugprone-*",
+        "--function-arg-placeholders",
+        "--pretty"
   ],
     "clangd.path": "/opt/homebrew/Cellar/llvm/19.1.7/bin/clangd", 
     "[cpp]": {
         "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
     },
+    // 下面的两项用于加速autocomplete
+    "editor.quickSuggestionsDelay": 3,
+    "editor.suggest.snippetsPreventQuickSuggestions": false
 }

@@ -1,8 +1,8 @@
 # include <iostream>
-# include "headers.hpp"
+# include "BinaryTree.hpp"
+
 int main()
 {
-    int a = 5;
-    std::cout << "Hello! world!\n";
-    return 0;
+    BinaryTree<int> * root = new BinaryTree<int>;
+    clearTree(root);
 }
