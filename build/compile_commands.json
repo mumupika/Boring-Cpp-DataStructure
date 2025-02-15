@@ -1,15 +1,9 @@
 [
 {
   "directory": "/Users/yimuyuan/Documents/codes/C_C++/DataStructure_and_algorithm/C++/build",
-  "command": "/opt/homebrew/opt/llvm/bin/clang++ -DLibBinaryTreeNode_EXPORTS -I/Users/yimuyuan/Documents/codes/C_C++/DataStructure_and_algorithm/C++/include  -g -O0 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -fPIC -o CMakeFiles/LibBinaryTreeNode.dir/src/BinaryTreeNode.cpp.o -c /Users/yimuyuan/Documents/codes/C_C++/DataStructure_and_algorithm/C++/src/BinaryTreeNode.cpp",
-  "file": "/Users/yimuyuan/Documents/codes/C_C++/DataStructure_and_algorithm/C++/src/BinaryTreeNode.cpp",
-  "output": "CMakeFiles/LibBinaryTreeNode.dir/src/BinaryTreeNode.cpp.o"
-},
-{
-  "directory": "/Users/yimuyuan/Documents/codes/C_C++/DataStructure_and_algorithm/C++/build",
-  "command": "/opt/homebrew/opt/llvm/bin/clang++ -DLibBinaryTree_EXPORTS -I/Users/yimuyuan/Documents/codes/C_C++/DataStructure_and_algorithm/C++/include  -g -O0 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -fPIC -o CMakeFiles/LibBinaryTree.dir/src/BinaryTree.cpp.o -c /Users/yimuyuan/Documents/codes/C_C++/DataStructure_and_algorithm/C++/src/BinaryTree.cpp",
+  "command": "/opt/homebrew/opt/llvm/bin/clang++ -DBinaryTree_EXPORTS -I/Users/yimuyuan/Documents/codes/C_C++/DataStructure_and_algorithm/C++/include  -g -O0 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -fPIC -o CMakeFiles/BinaryTree.dir/src/BinaryTree.cpp.o -c /Users/yimuyuan/Documents/codes/C_C++/DataStructure_and_algorithm/C++/src/BinaryTree.cpp",
   "file": "/Users/yimuyuan/Documents/codes/C_C++/DataStructure_and_algorithm/C++/src/BinaryTree.cpp",
-  "output": "CMakeFiles/LibBinaryTree.dir/src/BinaryTree.cpp.o"
+  "output": "CMakeFiles/BinaryTree.dir/src/BinaryTree.cpp.o"
 },
 {
   "directory": "/Users/yimuyuan/Documents/codes/C_C++/DataStructure_and_algorithm/C++/build",

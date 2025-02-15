@@ -5,9 +5,6 @@
 #include <unordered_map>
 
 template<class T>
-class BinaryTree;
-
-template<class T>
 class BinaryTreeNode {
     private:
         BinaryTreeNode<T> * lChild, *rChild;
@@ -30,9 +27,6 @@ class BinaryTreeNode {
 
         template<class G>
         friend void findHeight(BinaryTreeNode<G> *, int &, int);
-
-        template<class G>
-        friend BinaryTree<G> * castNodeToTree(BinaryTreeNode<G> * node);
 
         template<class G>
         friend BinaryTreeNode<G> * preInBuildTree(int, int, int, int, 

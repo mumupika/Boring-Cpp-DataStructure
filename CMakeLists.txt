@@ -32,9 +32,9 @@ include_directories(${PROJECT_SOURCE_DIR}/include)
 # Add the headers and the source files here.
 message("The cmake binary directory: " ${CMAKE_BINARY_DIR})
 message("The libraries directory: " ${CMAKE_LIBRARY_OUTPUT_DIRECTORY})
-add_library(LibBinaryTreeNode SHARED src/BinaryTreeNode.cpp)
-add_library(LibBinaryTree SHARED src/BinaryTree.cpp)
+# add_library(BinaryTreeNode SHARED src/BinaryTreeNode.cpp)
+add_library(BinaryTree SHARED src/BinaryTree.cpp)
 add_executable(main src/main.cpp)
 
 # Link the library with the source.
-target_link_libraries(main LibBinaryTree)
+target_link_libraries(main BinaryTree)
