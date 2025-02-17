@@ -56,9 +56,21 @@ target_sources(BinaryTreeNode
     PUBLIC
     FILE_SET modules TYPE CXX_MODULES
     FILES
-        include/BinaryTreeNode.cppm
+        management/BinaryTreeNode.cppm
+        include/BinaryTreeNode_defs.cpp
         src/BinaryTreeNode_impl.cpp
-        src/BinaryTreeNode_defs.cpp
+        
 )
 
-target_link_libraries(main BinaryTreeNode)
+add_library(BinaryTree SHARED)
+target_sources(BinaryTree
+    PUBLIC
+    FILE_SET modules TYPE CXX_MODULES
+    FILES
+        management/BinaryTree.cppm
+        include/BinaryTree_defs.cpp
+        src/BinaryTree_impl.cpp
+)
+target_link_libraries(BinaryTree BinaryTreeNode)
+
+target_link_libraries(main BinaryTree)
