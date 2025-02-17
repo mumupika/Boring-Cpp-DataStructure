@@ -23,6 +23,8 @@ export namespace BinaryTreeNode {
     
             // Deconstructor.
             ~BinaryTreeNode<T>(){};
+
+            void print();
         
             template<class G>
             friend void clearTree(BinaryTreeNode<G> *root);

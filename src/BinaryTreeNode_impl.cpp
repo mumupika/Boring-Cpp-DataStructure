@@ -2,6 +2,7 @@ module;
 
 #import <vector>
 #import <unordered_map>
+#import <iostream>
 
 
 export module BinaryTreeNode:BinaryTreeNode_impl;
@@ -61,5 +62,10 @@ export namespace BinaryTreeNode {
         preRoot -> lChild = preInBuildTree(preLeft+1, preLeft + rootIndex - inLeft, inLeft, rootIndex - 1, mappings, preOrder, inOrder);
         preRoot -> rChild = preInBuildTree(preLeft+rootIndex-inLeft+1, preRight, rootIndex + 1, inRight, mappings, preOrder, inOrder);
         return preRoot;
+    }
+
+    template<class T>
+    void BinaryTreeNode<T>::print() {
+        std::cout << "Data: " << data << std::endl;
     }
 };
