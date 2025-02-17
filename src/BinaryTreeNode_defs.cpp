@@ -4,35 +4,60 @@ module;
 
 export module BinaryTreeNode: BinaryTreeNode_defs;
 
-export class BinaryTreeNode
-{
-    private:
-        BinaryTreeNode * lChild, *rChild;
-        int data;
-    public:
-        // Default Constructor.
-        BinaryTreeNode() : lChild(nullptr), rChild(nullptr) {}
+export namespace BinaryTreeNode {
+    template<class T>
+    class BinaryTreeNode
+    {
+        private:
+            BinaryTreeNode<T> * lChild, *rChild;
+            T data;
+        public:
+            // Default Constructor.
+            BinaryTreeNode<T>() : lChild(nullptr), rChild(nullptr) {}
+    
+            // Constructor with value.
+            BinaryTreeNode<T>(int val) : lChild(nullptr), rChild(nullptr), data(val) {}
+    
+            // Constructor with value, left and right tree.
+            BinaryTreeNode<T>(int val, BinaryTreeNode *left, BinaryTreeNode *right) : lChild(left), rChild(right), data(val) {}
+    
+            // Deconstructor.
+            ~BinaryTreeNode<T>(){};
+        
+            template<class G>
+            friend void clearTree(BinaryTreeNode<G> *root);
 
-        // Constructor with value.
-        BinaryTreeNode(int val) : lChild(nullptr), rChild(nullptr), data(val) {}
+            template<class G>
+            friend void findHeight(BinaryTreeNode<G> *, int &, int);
 
-        // Constructor with value, left and right tree.
-        BinaryTreeNode(int val, BinaryTreeNode *left, BinaryTreeNode *right) : lChild(left), rChild(right), data(val) {}
+            template<class G>
+            friend BinaryTreeNode<G> * preInBuildTree(int, int, int, int, 
+                        std::unordered_map<BinaryTreeNode<G> *, int> &, 
+                        std::vector<BinaryTreeNode<G> * > &, 
+                        std::vector<BinaryTreeNode<G> * > &);
+            
+            template<class G>
+            friend BinaryTreeNode<G> * postInBuildTree(int, int, int, int, 
+                        std::unordered_map<BinaryTreeNode<G> *, int> &, 
+                        std::vector<BinaryTreeNode<G> * > &, 
+                        std::vector<BinaryTreeNode<G> * > &);
+    };
 
-        // Deconstructor.
-        ~BinaryTreeNode(){};
+    template<class G>
+    void clearTree(BinaryTreeNode<G> *root);
 
-        friend void clearTree(BinaryTreeNode *root);
+    template<class G>
+    void findHeight(BinaryTreeNode<G> *, int &, int);
 
-        friend void findHeight(BinaryTreeNode *, int &, int);
-
-        friend BinaryTreeNode * preInBuildTree(int, int, int, int, 
-            std::unordered_map<BinaryTreeNode *, int> &, 
-            std::vector<BinaryTreeNode * > &, 
-            std::vector<BinaryTreeNode * > &);
-
-        friend BinaryTreeNode * postInBuildTree(int, int, int, int, 
-            std::unordered_map<BinaryTreeNode *, int> &, 
-            std::vector<BinaryTreeNode * > &, 
-            std::vector<BinaryTreeNode * > &);
-};
+    template<class G>
+    BinaryTreeNode<G> * preInBuildTree(int, int, int, int, 
+                std::unordered_map<BinaryTreeNode<G> *, int> &, 
+                std::vector<BinaryTreeNode<G> * > &, 
+                std::vector<BinaryTreeNode<G> * > &);
+            
+    template<class G>
+    BinaryTreeNode<G> * postInBuildTree(int, int, int, int, 
+                std::unordered_map<BinaryTreeNode<G> *, int> &, 
+                std::vector<BinaryTreeNode<G> * > &, 
+                std::vector<BinaryTreeNode<G> * > &);
+}

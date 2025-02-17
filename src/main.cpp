@@ -2,7 +2,7 @@
 import BinaryTreeNode;
 
 int main() {
-    BinaryTreeNode * root = new BinaryTreeNode(3);
-    clearTree(root);
+    BinaryTreeNode::BinaryTreeNode<int> * root = new BinaryTreeNode::BinaryTreeNode<int>(3);
+    BinaryTreeNode::clearTree(root);
     return 0;
 }
