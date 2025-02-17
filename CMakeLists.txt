@@ -63,6 +63,7 @@ target_sources(BinaryTreeNode
 )
 
 add_library(BinaryTree SHARED)
+target_link_libraries(BinaryTree BinaryTreeNode)
 target_sources(BinaryTree
     PUBLIC
     FILE_SET modules TYPE CXX_MODULES
@@ -71,6 +72,5 @@ target_sources(BinaryTree
         include/BinaryTree_defs.cpp
         src/BinaryTree_impl.cpp
 )
-target_link_libraries(BinaryTree BinaryTreeNode)
 
-target_link_libraries(main BinaryTree)
+target_link_libraries(main BinaryTree BinaryTreeNode)
